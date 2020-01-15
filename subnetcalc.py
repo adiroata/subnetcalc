@@ -15,8 +15,11 @@ def subnet_calc():
             int_octet_ip = [int(i) for i in octet_ip]
 
             if (len(int_octet_ip) == 4) and \
+                    (0 <= int_octet_ip[0] <= 126) and \
                     (int_octet_ip[0] != 127) and \
                     (int_octet_ip[0] != 169) and  \
+                    (128 <= int_octet_ip[0] <= 168) and \
+                    (170 <= int_octet_ip[0] <= 255) and \
                     (0 <= int_octet_ip[1] <= 255) and \
                     (0 <= int_octet_ip[2] <=255) and \
                     (0 <= int_octet_ip[3] <= 255):
